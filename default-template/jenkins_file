@@ -1,8 +1,7 @@
 pipeline {
     agent {
-      node {
-        label "linu_134_server"
-        }
+       lebal "linu_134_server"
+    }
     
     stages {
         stage("Git Checkout") {
