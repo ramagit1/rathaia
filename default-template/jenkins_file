@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage("Git Checkout") {
+            steps {
+                // Get some code from a GitHub repository
+                git credentialsId: 'git_hub_crid', url: 'https://github.com/ramagit1/rathaia.git'
+            }
+        }
+    }
+}
