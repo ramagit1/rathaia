@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent {
+      node {
+        label "linu_134_server"
+        customWorkspace "jenkins_slave/linu_134_server"
     
-    environment{
-        PATH = "E:\\dev softwares\\J M T for windows\maven-3.5.3\\bin"
-    }
     stages {
         stage("Git Checkout") {
             steps {
@@ -11,11 +11,5 @@ pipeline {
                 git credentialsId: 'git_hub_crid', url: 'https://github.com/ramagit1/rathaia.git'
             }
         }
-        stage("Maven Build"){
-            steps{
-                sh "mvn clean package"
-              
-            }
-         }
     }
 }
