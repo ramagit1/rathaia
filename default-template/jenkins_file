@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    environment{
+        PATH = "E:\dev softwares\J M T for windows\maven-3.5.3"
+    }
     stages {
         stage("Git Checkout") {
             steps {
@@ -7,5 +11,11 @@ pipeline {
                 git credentialsId: 'git_hub_crid', url: 'https://github.com/ramagit1/rathaia.git'
             }
         }
+        stage("Maven Build"){
+            steps{
+                sh "mvn clean package"
+              
+            }
+         }
     }
 }
