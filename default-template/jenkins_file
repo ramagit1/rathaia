@@ -2,7 +2,7 @@ pipeline {
     agent {
       node {
         label "linu_134_server"
-        customWorkspace "jenkins_slave/linu_134_server"
+        }
     
     stages {
         stage("Git Checkout") {
