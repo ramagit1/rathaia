@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'linu_134_server' }
+    agent { label 'linu_160_128_server' }
     
     stages {
         stage("Git Checkout") {
