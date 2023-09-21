@@ -19,7 +19,7 @@ public class MyViewController extends UIViewController {
     private int clickCount;
 
     public MyViewController() {
-        // Get the view of this view controller.
+        // Get the views of this view controller.
         UIView view = getView();
 
         // Setup background.
